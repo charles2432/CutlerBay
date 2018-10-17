@@ -1,0 +1,76 @@
+.container{
+	display: grid;
+	grid-gap: 20px;
+}
+
+.topSection{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas:
+		"cover cover side1"
+		"cover cover side2"
+}
+
+.cover{
+	grid-area: cover;
+	height: 400px;
+	background-image: url("../images/dadeland.jpg");
+	background-size: cover;
+	background-position: bottom right;
+	color: white;
+	padding: 50px;
+	display: grid;
+	align-content: center;
+}
+
+.side{
+	background-color: #0e740e;
+	display: grid;
+	align-items: center;
+
+	justify-items: center;
+	align-content: center;
+	color: white;
+
+}
+.side1{
+	grid-area: side1;
+}
+
+.side2{
+	grid-area: side2;
+}
+
+.side p{
+	margin: 0px;
+}
+
+.size{
+	font-size: 40px;
+}
+
+.frosted{
+	background-color: rgba(23, 202, 255, 0.4);
+	width: 300px;
+	height: 150px;
+	padding-left: 10px;
+}
+
+/*tablet size */
+@media (max-width: 700px){
+.topSection{
+	grid-template-areas:
+		"cover cover"
+		"side1 side2"
+}
+}
+
+/* small display size */
+@media (max-width: 500px){
+.topSection{
+	grid-template-areas:
+		"cover"
+		"side1"
+		"side2"
+}
+}
